@@ -8,7 +8,7 @@ export const ProductList = () => {
     const [products,setProducts] = useState([]);
 
     const getData = async()=>{
-        let data = await axios.get("http://localhost:5000/products")
+        let data = await axios.get("https://basiccrudoperation.herokuapp.com/products")
         .then((data)=> data.data);
         console.log(data);
         setProducts(data);
